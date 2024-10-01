@@ -1,0 +1,24 @@
+{%for author in authors%}
+{% if (id == author.id) %}
+    <table>
+        <tr>
+
+        <th>Id</th>
+        <th>Picture</th>
+        <th>username</th>
+        <th>Email</th>
+        <th>Nb_books</th>
+        
+
+        </tr>
+         <tr>
+    <td>{{author.id}}</td>
+    <td> <img src={{author.picture}}  style="width: 110px; height: auto;"></td>
+    <td>{{author.username|upper}}</td>
+    <td>{{author.email}}</td>
+    <td>{{author.nb_books}}</td>
+    
+    </tr>
+    </table>
+{% endif %}
+{% endfor %}
